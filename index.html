@@ -1,61 +1,126 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width'>
+---
+layout: home
+main-title: "Luo Xiyu"
+subtitle: "Art Portfolio"
+description: "Graphic Design And More"
+images:
+ - image_path: /img/slider/1.png
+   gallery-folder: /img/slider/
+   url: about
+ - image_path: /img/slider/2.png
+   gallery-folder: /img/slider/
+   url: about
+ - image_path: /img/slider/3.png
+   gallery-folder: /img/slider/
+   url: about
+ - image_path: /img/slider/4.png
+   gallery-folder: /img/slider/
+   url: about1
+ - image_path: /img/slider/5.png
+   gallery-folder: /img/slider/
+   url: about1
+ - image_path: /img/slider/6.png
+   gallery-folder: /img/slider/
+   url: about1
+ - image_path: /img/slider/7.jpg
+   gallery-folder: /img/slider/
+   url: about2
+ - image_path: /img/slider/8.jpg
+   gallery-folder: /img/slider/
+   url: about2 
+ - image_path: /img/slider/9.jpg
+   gallery-folder: /img/slider/
+   url: about2
+ - image_path: /img/slider/10.jpg
+   gallery-folder: /img/slider/
+   url: about3
+ - image_path: /img/slider/11.jpg
+   gallery-folder: /img/slider/
+   url: about3
+ - image_path: /img/slider/12.jpg
+   gallery-folder: /img/slider/
+   url: about3
 
-        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Numans'>
-        
-        <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a7cd488d4d59e0012e8960f&product=sticky-share-buttons' async='async'></script>
-        
-        <style>
-            html,body{margin:0; padding:0; height:100%; }
-            body {
-                display: table;
-                width: 100%;
+---
 
-                color: black;
-                text-align: center;
-                font-family: 'Numans', sans-serif;
-                white-space: nowrap;
 
-                background:  #041f31;
-                
-                filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100, finishopacity=90, style=2);
-            }
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
 
-            div {
-                display: table-cell;
-                vertical-align: middle;
+<!-- CSS -->
+     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/galleries.css" media="screen" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/WYSIWYG.css" media="screen" />
 
-                text-align: center;
-            }
 
-            span { color:#0ae }
-        </style>
 
-        <title>PhotOrgasms</title>
-    </head>
+	<!-- Modernizr -->
+  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
 
-    <body>
-        <div id="typer">foo</div>
 
-        <script src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
-        <script src='jquery.typer.js'></script>
-        <script>
-            var win = $(window),
-                foo = $('#typer');
 
-            foo.typer(['<span>Welcome to <b>PhotOrgasms</b>!</span>', '<span>We are working hard to launch our website.</span>', '<span>We will be ready very soon.</span>']);
+  
 
-            // unneeded...
-            win.resize(function(){
-                var fontSize = Math.max(Math.min(win.width() / (1 * 10), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY));
+</head>
 
-                foo.css({
-                    fontSize: fontSize * .4 + 'px'
-                });
-            }).resize();
-        </script>
-    </body>
-</html>
+<body class="fullscreen">
+
+<!-- MAIN CONTENT SECTION  _____________________________________________-->
+	<section id="content" role="main">
+		<div class="wrapper">
+
+			<!-- WYSIWYG -->
+
+		<div class="position-absolute">
+				<h2 class="big no-margin"><strong>{{ page.main-title }}</strong></h2>
+				<h2>{{ page.subtitle }}</h2> 
+                     <div class="entry-summary">
+							<p>{{ page.description }}</p>
+						</div><br />
+			</div>
+     
+			<div class="gallery fullscreen-gallery kenburns-gallery">
+        {% for image in page.images %} 
+        <a href="{{ image.url }}">
+				<canvas id="kenburns"></canvas>
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+            
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}">
+	
+				</header>	
+				</figure>
+      </a>
+      {% endfor %}
+				</div>
+			<!-- END WYSIWYG -->
+			
+	
+		</div><!-- END .wrapper -->
+		
+	</section>
+
+  
+<!-- jQuery -->
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script src="{{ site.baseurl }}/js/retina.min.js"></script> 
+
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include gallery cycle plugin -->
+<script src="{{ site.baseurl }}/js/jquery.cycle.min.js"></script>
+<!-- include kenburns plugins -->
+<script src="{{ site.baseurl }}/js/kenburns.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+
+
+       </body>
+    </html>
+
