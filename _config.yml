@@ -1,5 +1,5 @@
 # Site settings
-title: PHOTORAMA
+title: Luoziz2Z.github.io
 email: ""
 description: "Photo Journal"
 url: "https://luoziz2z.github.io"
@@ -15,7 +15,7 @@ share: true
 
 # Owner/author information
 owner:
-  name:   photorama
+  name:   Luoziz2Z.github.io
   avatar: avatar.png
   favicon: favicon.ico
   info: photography website template
