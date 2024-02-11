@@ -33,10 +33,11 @@ comments :
 
 # Internal nav
 nav:
-  - PROJ1: "https://luoziz2z.github.io/about/"  
-  - PROJ2: "https://luoziz2z.github.io/about1/"
-  - PROJ3: "https://luoziz2z.github.io/about2/"
-  - PROJ4: "https://luoziz2z.github.io/about3/"
+  - a: ["https://luoziz2z.github.io/about/", "Tomate"] 
+  - b: ["https://luoziz2z.github.io/about1/","Child Matsutake"]
+  - c: ["https://luoziz2z.github.io/about2/","Add & Sub"]
+  - d: ["https://luoziz2z.github.io/about3/","FAKE IT"]
+
 
 # All translation keys
 translations:
